@@ -1,0 +1,52 @@
+{
+  "selectedKey": "demo01",
+  "navigation": [
+    {
+      "title": "基本柱状图",
+      "icon": "sap-icon://database",
+      "key": "demo01"
+    },
+    {
+      "title": "Demo02",
+      "icon": "sap-icon://project-definition-triangle-2",
+      "key": "demo02"
+    }
+  ],
+  "fixedNavigation": [
+    {
+      "title": "Github",
+      "icon": "../webapp/img/logo_ui5.png"
+    }
+  ],
+  "echartOption": [
+    {
+      "name": "demo01",
+      "xAxis": {
+        "type": "category",
+        "data": ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"]
+      },
+      "yAxis": {
+        "type": "value"
+      },
+      "series": [
+        {
+          "type": "bar",
+          "showBackground": true,
+          "backgroundStyle": {
+            "color": "rgba(180, 180, 180, 0.2)"
+          },
+          "data": [23,24,18,25,27,{
+            "value": 33,
+            "itemStyle": {
+              "color": "#91cc75",
+              "shadowColor": "#91cc75",
+              "borderType": "dashed",
+              "opacity": 0.5
+            }
+          },
+          25]
+        }
+      ]
+    }
+  ]
+}

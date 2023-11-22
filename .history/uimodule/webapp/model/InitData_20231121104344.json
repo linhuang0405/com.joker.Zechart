@@ -1,0 +1,111 @@
+{
+  "selectedKey": "demo01",
+  "navigation": [
+    {
+      "title": "基本柱状图",
+      "icon": "sap-icon://column-chart-dual-axis",
+      "key": "demo01"
+    },
+    {
+      "title": "堆叠柱状图",
+      "icon": "sap-icon://column-chart-dual-axis",
+      "key": "demo02"
+    },
+    {
+      "title": "动态排序柱状图",
+      "icon": "sap-icon://column-chart-dual-axis",
+      "key": "demo03"
+    }    
+  ],
+  "fixedNavigation": [
+    {
+      "title": "Github",
+      "icon": "../webapp/img/logo_ui5.png"
+    }
+  ],
+  "echartOption": [
+    {
+      "name": "demo01",
+      "xAxis": {
+        "type": "category",
+        "data": ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"]
+      },
+      "yAxis": {
+        "type": "value"
+      },
+      "series": [
+        {
+          "type": "bar",
+          "showBackground": true,
+          "backgroundStyle": {
+            "color": "rgba(180, 180, 180, 0.2)"
+          },
+
+          "data": [23,24,18,25,27,{
+            "value": 33,
+            "itemStyle": {
+              "color": "#91cc75",
+              "shadowColor": "#91cc75",
+              "borderType": "dashed",
+              "opacity": 0.5
+            }
+          },
+          25]
+        }
+      ]
+    },
+    {
+        "xAxis": {
+          "data": ["A", "B", "C", "D", "E"]
+        },
+        "yAxis": {},
+        "series": [
+          {
+            "data": [10, 22, 28, 43, 49],
+            "type": "bar",
+            "stack": "x"
+          },
+          {
+            "data": [5, 4, 3, 5, 10],
+            "type": "bar",
+            "stack": "x"
+          }
+        ]    
+    },
+    {
+        "xAxis": {
+          "max": "dataMax"
+        },
+        "yAxis": {
+          "type": "category",
+          "data": ["A", "B", "C", "D", "E"],
+          "inverse": true,
+          "animationDuration": 300,
+          "animationDurationUpdate": 300,
+          "max": 3
+        },
+        "series": [
+          {
+            "realtimeSort": true,
+            "name": "X",
+            "type": "bar",
+            "data": [],
+            "barWidth": "20%",
+            "label": {
+              "show": true,
+              "position": "right",
+              "valueAnimation": true
+            }
+          }
+        ],
+        "legend": {
+          "show": true
+        },
+        "animationDuration": 3000,
+        "animationDurationUpdate": 3000,
+        "animationEasing": "linear",
+        "animationEasingUpdate": "linear"   
+    }
+
+  ]
+}

@@ -1,0 +1,330 @@
+{
+  "selectedKey": "histogram",
+  "navigation": [
+    {
+      "title": "柱状图",
+      "icon": "sap-icon://column-chart-dual-axis",
+      "expanded": true,
+      "key": "histogram",
+			"items": [
+				{
+					"title": "基本柱状图",
+          "icon": "sap-icon://column-chart-dual-axis",
+					"key": "demo01"
+				},
+				{
+					"title": "堆叠柱状图",
+          "icon": "sap-icon://column-chart-dual-axis",
+					"key": "demo02"
+				},
+        {
+					"title": "动态排序柱状图",
+          "icon": "sap-icon://column-chart-dual-axis",
+					"key": "demo03"
+				},
+        {
+					"title": "阶梯瀑布图",
+          "icon": "sap-icon://column-chart-dual-axis",
+					"key": "demo04"
+				}
+			]
+    },
+    {
+      "title": "折线图",
+      "icon": "sap-icon://multiple-line-chart",
+      "expanded": false,
+      "key": "lineChart",
+			"items": [
+				{
+					"title": "基础折线图",
+          "icon": "sap-icon://column-chart-dual-axis",
+					"key": "demo05"
+				},
+				{
+					"title": "堆叠折线图",
+          "icon": "sap-icon://column-chart-dual-axis",
+					"key": "demo06"
+				},
+        {
+					"title": "区域面积图",
+          "icon": "sap-icon://column-chart-dual-axis",
+					"key": "demo07"
+				},
+        {
+					"title": "平滑曲线图",
+          "icon": "sap-icon://column-chart-dual-axis",
+					"key": "demo08"
+				},
+        {
+					"title": "阶梯线图",
+          "icon": "sap-icon://column-chart-dual-axis",
+					"key": "demo09"
+				}
+			]
+    },
+    {
+      "title": "饼图",
+      "icon": "sap-icon://multiple-line-chart",
+      "expanded": false,
+      "key": "lineChart",
+			"items": [
+				{
+					"title": "基础饼图",
+          "icon": "sap-icon://column-chart-dual-axis",
+					"key": "demo10"
+				},
+				{
+					"title": "圆环图",
+          "icon": "sap-icon://column-chart-dual-axis",
+					"key": "demo11"
+				},
+        {
+					"title": "南丁格尔图（玫瑰图）",
+          "icon": "sap-icon://column-chart-dual-axis",
+					"key": "demo12"
+				}
+			]
+    }
+  ],
+  "fixedNavigation": [
+    {
+      "title": "Github",
+      "icon": "../webapp/img/logo_ui5.png"
+    }
+  ],
+  "echartOption": [
+    {
+      "name": "demo01",
+      "xAxis": {
+        "type": "category",
+        "data": ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"]
+      },
+      "yAxis": {
+        "type": "value"
+      },
+      "series": [
+        {
+          "type": "bar",
+          "showBackground": true,
+          "backgroundStyle": {
+            "color": "rgba(180, 180, 180, 0.2)"
+          },
+          "data": [23,24,18,25,27,{
+            "value": 33,
+            "itemStyle": {
+              "color": "#91cc75",
+              "shadowColor": "#91cc75",
+              "borderType": "dashed",
+              "opacity": 0.5
+            }
+          },
+          25]
+        }
+      ]
+    },
+    {
+        "xAxis": {
+          "data": ["A", "B", "C", "D", "E"]
+        },
+        "yAxis": {},
+        "series": [
+          {
+            "data": [10, 22, 28, 43, 49],
+            "type": "bar",
+            "stack": "x"
+          },
+          {
+            "data": [5, 4, 3, 5, 10],
+            "type": "bar",
+            "stack": "x"
+          }
+        ]    
+    },
+    {
+        "xAxis": {
+          "max": "dataMax"
+        },
+        "yAxis": {
+          "type": "category",
+          "data": ["A", "B", "C", "D", "E"],
+          "inverse": true,
+          "animationDuration": 300,
+          "animationDurationUpdate": 300,
+          "max": 3
+        },
+        "series": [
+          {
+            "realtimeSort": true,
+            "name": "X",
+            "type": "bar",
+            "data": [],
+            "barWidth": "20%",
+            "label": {
+              "show": true,
+              "position": "right",
+              "valueAnimation": true
+            }
+          }
+        ],
+        "legend": {
+          "show": true
+        },
+        "animationDuration": 3000,
+        "animationDurationUpdate": 3000,
+        "animationEasing": "linear",
+        "animationEasingUpdate": "linear"   
+    },
+    {
+      "title": {
+        "text": "Waterfall"
+      },
+      "grid": {
+        "left": "3%",
+        "right": "4%",
+        "bottom": "3%",
+        "containLabel": true
+      },
+      "xAxis": {
+        "type": "category",
+        "splitLine": { "show": false },
+        "data": []
+      },
+      "yAxis": {
+        "type": "value"
+      },
+      "series": [
+        {
+          "type": "bar",
+          "stack": "all",
+          "itemStyle": {
+            "normal": {
+              "barBorderColor": "rgba(0,0,0,0)",
+              "color": "rgba(0,0,0,0)"
+            },
+            "emphasis": {
+              "barBorderColor": "rgba(0,0,0,0)",
+              "color": "rgba(0,0,0,0)"
+            }
+          },
+          "data": "help"
+        },
+        {
+          "name": "positive",
+          "type": "bar",
+          "stack": "all",
+          "data": "positive"
+        },
+        {
+          "name": "negative",
+          "type": "bar",
+          "stack": "all",
+          "data": "negative",
+          "itemStyle": {
+            "color": "#f33"
+          }
+        }
+      ]
+    },    
+    {
+      "xAxis": {
+        "type": "category",
+        "data": ["A", "B", "C"]
+      },
+      "yAxis": {
+        "type": "value"
+      },
+      "series": [
+        {
+          "data": [120, 200, 150],
+          "type": "line"
+        }
+      ]
+    },
+    {
+      "xAxis": {
+        "data": ["A", "B", "C", "D", "E"]
+      },
+      "yAxis": {},
+      "series": [
+        {
+          "data": [10, 22, 28, 43, 49],
+          "type": "line",
+          "stack": "x",
+          "areaStyle": {}
+        },
+        {
+          "data": [5, 4, 3, 5, 10],
+          "type": "line",
+          "stack": "x",
+          "areaStyle": {}
+        }
+      ]
+    },
+    {
+      "xAxis": {
+        "data": ["A", "B", "C", "D", "E"]
+      },
+      "yAxis": {},
+      "series": [
+        {
+          "data": [10, 22, 28, 23, 19],
+          "type": "line",
+          "areaStyle": {}
+        },
+        {
+          "data": [25, 14, 23, 35, 10],
+          "type": "line",
+          "areaStyle": {
+            "color": "#ff0",
+            "opacity": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "xAxis": {
+        "data": ["A", "B", "C", "D", "E"]
+      },
+      "yAxis": {},
+      "series": [
+        {
+          "data": [10, 22, 28, 23, 19],
+          "type": "line",
+          "smooth": true
+        }
+      ]
+    },
+    {
+      "xAxis": {
+        "type": "category",
+        "data": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+      },
+      "yAxis": {
+        "type": "value"
+      },
+      "series": [
+        {
+          "name": "Step Start",
+          "type": "line",
+          "step": "start",
+          "data": [120, 132, 101, 134, 90, 230, 210]
+        },
+        {
+          "name": "Step Middle",
+          "type": "line",
+          "step": "middle",
+          "data": [220, 282, 201, 234, 290, 430, 410]
+        },
+        {
+          "name": "Step End",
+          "type": "line",
+          "step": "end",
+          "data": [450, 432, 401, 454, 590, 530, 510]
+        }
+      ]
+    }    
+
+
+
+  ]
+}

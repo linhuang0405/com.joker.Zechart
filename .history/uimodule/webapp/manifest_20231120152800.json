@@ -1,0 +1,36 @@
+{
+	"sap.app": {
+		"id": "com.joker.Zechart",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "com.joker.Zechart.view.ShellBarWithSplitApp",
+			"type": "XML",
+			"async": true
+		},
+		"dependencies": {
+			"libs": {
+				"sap.f": {},
+				"sap.m": {},
+				"sap.tnt": {},
+				"sap.ui.core": {}
+			}
+		},
+		"config": {
+			"sample": {
+				"stretch": true,
+				"files": [
+					"controller/MainView.controller.controller.js",
+					"model/model.json",
+					"view/MainView.controller.view.xml",
+					"fragment/NavigationList.fragment.xml",
+					"fragment/SideNavigation.fragment.xml",
+					"manifest.json"
+				]
+			}
+		}
+	}
+}

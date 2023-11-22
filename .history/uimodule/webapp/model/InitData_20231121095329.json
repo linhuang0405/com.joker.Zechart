@@ -1,0 +1,52 @@
+{
+  "selectedKey": "demo01",
+  "navigation": [
+    {
+      "title": "Demo01",
+      "icon": "sap-icon://database",
+      "key": "demo01"
+    },
+    {
+      "title": "Demo02",
+      "icon": "sap-icon://project-definition-triangle-2",
+      "key": "demo02"
+    }
+  ],
+  "fixedNavigation": [
+    {
+      "title": "Github",
+      "icon": "../webapp/img/logo_ui5.png"
+    }
+  ],
+  "echartOption": [
+    {
+      "name":"demo01",
+      "xAxis": {
+        "data": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat",
+          "Sun"
+        ]
+      },
+      "yAxis": {},
+      "series": [
+        {
+          "type": "bar",
+          "data": [
+            23,
+            24,
+            18,
+            25,
+            27,
+            28,
+            25
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "_version": "1.115.0",
+  "sap.app": {
+    "id": "com.joker.Zechart",
+    "applicationVersion": {
+      "version": "1.115.0"
+    }
+  },
+  "sap.ui5": {
+    "rootView": {
+      "viewName": "com.joker.Zechart.view.HomePage",
+      "type": "XML",
+      "async": true
+    },
+    "dependencies": {
+      "libs": {
+        "sap.f": {},
+        "sap.m": {},
+        "sap.tnt": {},
+        "sap.ui.core": {},
+        "sap.ui.layout": {},
+        "sap.ui.comp": {},
+        "sap.uxap": {},
+        "sap.ushell": {},
+        "sap.collaboration": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "com.joker.Zechart.i18n.i18n"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "config": {
+      "sample": {
+        "stretch": true,
+        "files": ["controller/HomePage.controller.js", "model/model.json", "view/HomePage.view.xml", "fragment/NavigationList.fragment.xml", "fragment/SideNavigation.fragment.xml", "manifest.json"]
+      }
+    }
+  }
+}

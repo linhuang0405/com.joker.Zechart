@@ -1,0 +1,21 @@
+{
+  "selectedKey": "demo01",
+  "navigation": [
+    {
+      "title": "Demo01",
+      "icon": "sap-icon://database",
+      "key": "demo01"
+    },
+    {
+      "title": "Demo02",
+      "icon": "sap-icon://project-definition-triangle-2",
+      "key": "demo02"
+    }
+  ],
+  "fixedNavigation": [
+    {
+      "title": "Github",
+      "icon": "../webapp/img/logo_ui5.png"
+    }
+  ]
+}
